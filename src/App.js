@@ -80,12 +80,12 @@ function App() {
               <input
                 type='text'
                 placeholder='Please Input your Ip address here'
-                className='text-xs px-6 py-2  w-60  rounded-l-md md:text-sm xl:text-base md:px-10 md:py-4 md:w-80 text-VeryDarkGray outline-none '
+                className='text-xs px-6 py-2  w-60  rounded-l-md md:text-sm xl:text-base md:px-10 md:py-4 md:w-80 text-VeryDarkGray outline-none  border-none rounded-r-none'
                 value={ip}
                 onChange={(e) => setIP(e.target.value)}
               />
               <button
-                className='bg-VeryDarkGray px-2 py-[9px] rounded-r-md md:py-[19px]'
+                className='bg-VeryDarkGray px-2 py-[9px] rounded-r-md md:px-3 md:py-[19px] h-full'
                 onClick={() => handlesubmit()}
               >
                 <img src={arrow} alt='' />
