@@ -33,7 +33,7 @@ function App() {
       const data = await response.json()
       if (data.code === 422) {
         setError('Please input a valid IP address (click below to generate)')
-        setTimeout(setError, 4000)
+        setTimeout(setError, 5000)
       } else setInfo(data)
     } catch (error) {
       setInfo('')
@@ -73,14 +73,14 @@ function App() {
         <div className='font-sans text-white flex flex-col justify-center items-center pt-10 space-y-6 absolute top-0 left-0 right-0 z-10 '>
           <h1 className='text-xl'> IP Address Tracker</h1>
           <div>
-            <h1 className='text-center font-sans mb-1 text-sm font-bold tracking text-orange-500'>
+            <h1 className='text-center font-sans mb-2 text-sm font-bold tracking text-orange-500'>
               {error}
             </h1>
-            <div className='flex justify-center items-center'>
+            <div className='flex justify-center items-center -gap-2'>
               <input
                 type='text'
                 placeholder='Please Input your Ip address here'
-                className='text-xs px-6 py-2 rounded-l-md w-60 md:text-sm xl:text-base md:px-10 md:py-4 md:w-80 text-VeryDarkGray outline-none '
+                className='text-xs px-6 py-2  w-60  rounded-l-md md:text-sm xl:text-base md:px-10 md:py-4 md:w-80 text-VeryDarkGray outline-none '
                 value={ip}
                 onChange={(e) => setIP(e.target.value)}
               />
